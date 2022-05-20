@@ -30,9 +30,14 @@ public class MainClass {
         ElectronicDevice device = new ElectronicDevice();
         // instantiation of an input object
         scanner = new Scanner(System.in);
-        // console dialog for taking actions
-        //makeUserDialog(device);
+        //the topology access method you want
         read(device);
+        write(device);
+        topologiesQuery(device);
+        deleteTopology(device);
+        componentsQuery(device);
+        netlistQuery(device);
+
     }
 
 
@@ -42,7 +47,7 @@ public class MainClass {
         String filePath = scanner.nextLine();
         Topology tpg = device.readFromJSON(filePath);
         if (tpg != null) {
-            // System.out.println(tpg.toString()); // printing topology in a readable manner
+            System.out.println(tpg.toString()); // printing topology in a readable manner
             System.out.println("[MESSAGE]: File has been read successfully !\n");
         }
     }
