@@ -17,8 +17,6 @@ import java.util.Scanner;
 
 public class MainClass extends  API_implementation{
 
-    //API_implementation api = new API_implementation();
-
 
     /**
      * the main entry point program for establishing
@@ -29,8 +27,6 @@ public class MainClass extends  API_implementation{
     public static void main(String[] args) {
         // ElectronicDevice instantiation
         ElectronicDevice device = new ElectronicDevice();
-        // instantiation of an input object
-        //scanner = new Scanner(System.in);
         //the topology access method you want
         read(device);
         write(device);
